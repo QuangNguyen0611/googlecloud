@@ -9,3 +9,13 @@ variable "region" {
   type        = string
   default     = "asia-southeast1"
 }
+variable "network_name" {
+  description = "The name of the network to create."
+  type        = string
+  default     = "qthn-network"
+}
+variable "subnetwork_name" {
+  description = "The name of the subnetwork to create."
+  type        = string
+  default     = "qthn-subnetwork"
+}
