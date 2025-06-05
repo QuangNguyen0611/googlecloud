@@ -13,3 +13,8 @@ module "instance" {
   zone          = var.zone
 }
 
+module "product_services" {
+  source = "./modules/product_services"
+  project_id = var.project_id
+}
+
