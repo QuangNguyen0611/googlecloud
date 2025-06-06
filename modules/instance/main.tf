@@ -27,13 +27,15 @@ resource "google_compute_instance" "qthn-instance" {
   network_interface {
     network    = var.network_id
     subnetwork = var.subnetwork_id
-
-    access_config {
-      // Ephemeral public IP
-    }
-  }
+#giúp không địa chỉ External public
+ #   access_config {
+ #     // Ephemeral public IP
+ #   }
+ # }
 
   metadata = {
     foo = "bar"
   }
 }
+
+metadata_startup_script = "echo hi > /test.txt"
