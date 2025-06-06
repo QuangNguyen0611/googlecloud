@@ -12,7 +12,7 @@ module "instance" {
   network_id    = module.network.network_id
   subnetwork_id = module.network.subnetwork_id
   zone          = var.zone
-  depends_on = [module.product_services]
+  depends_on    = [module.product_services]
 }
 
 module "product_services" {
